@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor de Calidad del Aire</title>
+    <link rel="icon" href="https://esrimastergis.maps.arcgis.com/sharing/rest/content/items/24f7a1c6cb534779b0123382644f33bd/data?token=3NKHt6i2urmWtqOuugvr9c9_8lHEqUwZ4DNCawIeTX7qe7i3AYvlurguAa0xscH6eKoHCi-1S_-yUJhaYMTWcNgfFpNsTl9Ki9I9wCsmabk-2i57HhKD_VPf1xWPOQd5_pZz-0uBsYIAWJ9hB__itHtXJLSnKyXK_0wHCoMDorSyjwmqh_VGI_8KdJWOR9VuM1ZJuEwOrhSd0Cm-FtbVDWXNpt0dn06Go1jv1Jy6zPE." type="image/png">
+
+    <!-- Cargar la SDK -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.31/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.31/"></script>
+
+    <!-- Cargar CSS y JS-->
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+
+        <!-- Encabezado -->
+        <header class="header">
+            <img src= "https://esrimastergis.maps.arcgis.com/sharing/rest/content/items/24f7a1c6cb534779b0123382644f33bd/data?token=3NKHt6i2urmWtqOuugvr9c9_8lHEqUwZ4DNCawIeTX7qe7i3AYvlurguAa0xscH6eKoHCi-1S_-yUJhaYMTWcB5drakrbe5EGtzeKH2xJeYhX1OTe0hV4NWPElJHFzLNONaixYtFqZmIAuUTEoXtQOMnWeeu5S7QIbC2XWQdl3HliZ07dWhag-eOphLpxMStW3hoOPzfZereY5aLbrpGMe64BESjwTdtGJrNuHBg9Kfh_ONnqYe4r5gWx5AQz6E6ox_0ZIOiQpAocAAgi_VDwg.." alt="Logo AirX" width="80" type="image/png">
+            <h1>Visor de Calidad del Aire del Municipio de Madrid</h1>
+        </header>
+
+        <!-- Mapa (ViewDiv) -->
+        <div id="viewDiv"></div> 
+
+        <!-- Widget de Resultados -->
+        <div id="resultado-estaciones" class="resultado-estaciones">
+            <h3>Estaciones Cercanas Seleccionadas</h3>
+            <p>Estaciones de Autobús: 0</p>
+            <p>Estaciones de Metro: 0</p>
+            <p>Estaciones de Cercanías: 0</p>
+        </div>
+
+        <!-- Widget Resumen Estadísticas -->
+        <div id="resumen" class="resumen">
+            <h3>Resumen Estadístico</h3>
+
+            <div class="tabs">
+                <div class="tab" data-tab="ca">Calidad Aire</div>
+                <div class="tab" data-tab="meteo">Meteorológico</div>
+            </div>
+            
+            <div class="pestana" id="ca">
+                <p><strong>Dióxido de Nitrógeno</strong></p>
+                <p>Valor Medio: 57µg/m³</p>
+                <p>Valor Máximo: 123µg/m³</p>
+                <p>Valor Mínimo: 11µg/m³</p>
+                <p><strong>Ozono</strong></p>
+                <p>Valor Medio: 13µg/m³</p>
+                <p>Valor Máximo: 55µg/m³</p>
+                <p>Valor Mínimo: 1µg/m³</p>
+                <p><strong>Partículas 10μm</strong></p>
+                <p>Valor Medio: 28µg/m³</p>
+                <p>Valor Máximo: 64µg/m³</p>
+                <p>Valor Mínimo: 0µg/m³</p>
+            </div>
+
+            <div class="pestana" id="meteo">
+                <p>Precipitación acumulada: 3,3mm</p>
+                <p>Temperatura: 9,5°C</p>
+                <p>Humedad: 60,52%</p>
+                <p>Velocidad del viento: 1,52km/h</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
